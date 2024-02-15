@@ -9,7 +9,7 @@ import { Component, OnInit } from "@angular/core";
 export class HomeComponent implements OnInit {
   constructor(private HeaderService: HeaderService) {
     HeaderService.headerData = {
-      title: "Inicio",
+      title: "Home",
       icon: 'home',
       routeUrl: './employees',
     };

@@ -12,7 +12,7 @@ export class EmployeeCrudComponent implements OnInit {
   constructor(private router: Router, private HeaderService: HeaderService) {
     HeaderService.headerData = {
       title: "Register of Employees",
-      icon: 'storefront',
+      icon: 'person_add_alt_1',
       routeUrl: './employees',
     };
    }

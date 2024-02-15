@@ -7,7 +7,7 @@ import { BehaviorSubject } from "rxjs";
 })
 export class HeaderService {
   private _headerData = new BehaviorSubject<HeaderData>({
-    title: "Inicio",
+    title: "Home",
     icon: "home",
     routeUrl: "",
   });
