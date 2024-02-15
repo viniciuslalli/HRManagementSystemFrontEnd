@@ -1,4 +1,4 @@
-# Angular-CRUD
+# HRManagementSystemFrontEnd
 
 First things first: 
 
@@ -6,4 +6,4 @@ First things first:
 - npm start first in backend folder to start the "server" 
 - npm start in frontend folder to start the application
 
-That's it! Enjoy this short application to solidify your knowledge of Angular
+That's it! 
