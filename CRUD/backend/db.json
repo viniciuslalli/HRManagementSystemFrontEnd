@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "Notebook Mac Pro 10",
+      "price": 12000.89
+    },
+    {
+      "id": 3,
+      "name": "iPhone",
+      "price": "30000"
+    },
+    {
+      "name": "Jaguar",
+      "price": "89.00",
+      "id": 4
+    },
+    {
+      "name": "Honda",
+      "price": "89000",
+      "id": 5
+    },
+    {
+      "name": "Honda fit",
+      "price": "5500000",
+      "id": 6
+    }
+  ]
+}
