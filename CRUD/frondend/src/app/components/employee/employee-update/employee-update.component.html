@@ -1,13 +1,32 @@
 <mat-card>
-    <mat-card-title>Updated employee</mat-card-title>
+    <mat-card-title>Updated Employee</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome"
-             [(ngModel)]="employee.name" name="name">
+            <input matInput placeholder="Name" [(ngModel)]="employee.name" name="name">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Price (R$)" 
-            [(ngModel)]="employee.price" name="price"> 
+            <input matInput placeholder="Surname" [(ngModel)]="employee.surname" name="surname">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Salary ($)" [(ngModel)]="employee.salary" name="salary"> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Gender" [(ngModel)]="employee.gender" name="gender"> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Address" [(ngModel)]="employee.address" name="address"> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Email" [(ngModel)]="employee.email" name="email"> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Phone Number" [(ngModel)]="employee.phonenumber" name="phonenumber"> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Nationality" [(ngModel)]="employee.nationality" name="nationality"> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Date of Birth" [(ngModel)]="employee.dateOfBirth" name="dateOfBirth"> 
         </mat-form-field>
     </form>
     <button mat-raised-button (click)="updateEmployee()" color="primary">
@@ -15,7 +34,6 @@
     </button>
     
     <button mat-raised-button (click)="cancel()">
-        Cancelar
+        Cancel
     </button>
 </mat-card>
-

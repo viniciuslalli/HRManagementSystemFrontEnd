@@ -1,29 +1,64 @@
 {
-  "products": [
+  "employees": [
+    {
+      "id": 1,
+      "name": "Vinicius",
+      "surname": "Lalli",
+      "salary": 45000,
+      "gender": "MALE",
+      "address": "Curitiba",
+      "email": "vinicius@gmail.com",
+      "phonenumber": "555",
+      "nationality": "Brazilian",
+      "dateOfBirth": "1994-06-11"
+    },
     {
       "id": 2,
-      "name": "Notebook Mac Pro 10",
-      "price": 12000.89
+      "name": "Maria",
+      "surname": "Silva",
+      "salary": 52000,
+      "gender": "FEMALE",
+      "address": "São Paulo",
+      "email": "mariaSilva@gmail.com",
+      "phonenumber": "123",
+      "nationality": "Brazilian",
+      "dateOfBirth": "1990-03-15"
     },
     {
       "id": 3,
-      "name": "iPhone",
-      "price": "30000"
+      "name": "John",
+      "surname": "Doe",
+      "salary": 60000,
+      "gender": "MALE",
+      "address": "New York",
+      "email": "john.doe@example.com",
+      "phonenumber": "789",
+      "nationality": "American",
+      "dateOfBirth": "1985-11-22"
     },
     {
-      "name": "Jaguar",
-      "price": "89.00",
-      "id": 4
+      "id": 4,
+      "name": "Anna",
+      "surname": "Johnson",
+      "salary": 48000,
+      "gender": "FEMALE",
+      "address": "London",
+      "email": "anna.johnson@example.com",
+      "phonenumber": "456",
+      "nationality": "British",
+      "dateOfBirth": "1988-07-30"
     },
     {
-      "name": "Honda",
-      "price": "89000",
-      "id": 5
-    },
-    {
-      "name": "Honda fit",
-      "price": "5500000",
-      "id": 6
+      "id": 5,
+      "name": "Carlos",
+      "surname": "Garcia",
+      "salary": 51000,
+      "gender": "MALE",
+      "address": "Madrid",
+      "email": "carlos.garcia@example.com",
+      "phonenumber": "789",
+      "nationality": "Spanish",
+      "dateOfBirth": "1992-05-18"
     }
   ]
 }

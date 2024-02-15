@@ -11,9 +11,16 @@ import { EmployeeService } from '../employee.service';
 export class EmployeeCreateComponent implements OnInit {
 
 
-  employee: Employee = {
+   employee: Employee = {
     name: '',
-    price: null 
+    surname: '',
+    salary: null,
+    gender: '',
+    address: '', 
+    email: '',
+    phonenumber: '',
+    nationality: '',
+    dateOfBirth: '',
   }
 
 

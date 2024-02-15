@@ -1,0 +1,29 @@
+.login-container {
+    width: 300px; /* Defina a largura desejada para o container de login */
+    margin: 0 auto; /* Isso centralizará o container horizontalmente */
+    margin-top: 100px; /* Ajuste conforme necessário para centralizar verticalmente */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+
+
+
+
+/* Animação de sacudida */
+.shake {
+    animation: shake 0.5s;
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+  }

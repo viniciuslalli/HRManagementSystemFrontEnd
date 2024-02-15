@@ -36,6 +36,8 @@ import { EmployeeReadComponent } from './components/employee/employee-read/emplo
 import { EmployeeRead2Component } from './components/employee/employee-read2/employee-read2.component';
 import { EmployeeUpdateComponent } from './components/employee/employee-update/employee-update.component';
 import { EmployeeDeleteComponent } from './components/employee/employee-delete/employee-delete.component';
+import { LoginComponent } from './components/authentication/login/login.component';
+import { AuthService } from './components/authentication/auth.service';
 
 registerLocaleData(localePt);
 
@@ -56,7 +58,8 @@ registerLocaleData(localePt);
     EmployeeReadComponent,
     EmployeeRead2Component,
     EmployeeUpdateComponent,
-    EmployeeDeleteComponent
+    EmployeeDeleteComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -79,7 +82,8 @@ registerLocaleData(localePt);
   providers: [{
     provide: LOCALE_ID,
     useValue: 'pt-BR'
-  }],
+  },
+  AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

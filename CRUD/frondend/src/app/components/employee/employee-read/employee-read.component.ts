@@ -10,7 +10,7 @@ import { EmployeeService } from "../employee.service";
 export class EmployeeReadComponent implements OnInit {
 
   employees!: Employee[]
-  displayedColumns = ['id', 'name', 'price', 'action']
+  displayedColumns = ['id', 'name', 'surname', 'salary', 'gender', 'address', 'email', 'phonenumber', 'nationality', 'dateOfBirth', 'action']
 
   constructor(private EmployeeService: EmployeeService) {}
 

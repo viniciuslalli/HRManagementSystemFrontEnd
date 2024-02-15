@@ -2,20 +2,38 @@
     <mat-card-title>Delete Employee</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome"
-             [value]="employee.name" name="name" disabled>
+            <input matInput placeholder="Name" [value]="employee.name" name="name" disabled>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Price (R$)" 
-            [value]="employee.price" name="price" disabled> 
+            <input matInput placeholder="Surname" [value]="employee.surname" name="surname" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Salary ($)" [value]="employee.salary" name="salary" disabled> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Gender" [value]="employee.gender" name="gender" disabled> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Address" [value]="employee.address" name="address" disabled> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Email" [value]="employee.email" name="email" disabled> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Phone Number" [value]="employee.phonenumber" name="phonenumber" disabled> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Nationality" [value]="employee.nationality" name="nationality" disabled> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Date of Birth" [value]="employee.dateOfBirth" name="dateOfBirth" disabled> 
         </mat-form-field>
     </form>
     <button mat-raised-button (click)="delete()" color="warn">
-        Deletar
+        Delete
     </button>
     
     <button mat-raised-button (click)="cancel()">
-        Cancelar
+        Cancel
     </button>
 </mat-card>
-

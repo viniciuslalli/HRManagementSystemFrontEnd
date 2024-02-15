@@ -1,3 +1,10 @@
-<app-header></app-header>
-<app-footer></app-footer>
-<app-nav></app-nav>
+<!-- app.component.html -->
+<ng-container *ngIf="authService.isLoggedIn; else loginTemplate">
+    <app-header></app-header>
+    <app-nav></app-nav>
+    <app-footer></app-footer>
+</ng-container>
+  
+<ng-template #loginTemplate>
+ <app-login></app-login>
+</ng-template>
