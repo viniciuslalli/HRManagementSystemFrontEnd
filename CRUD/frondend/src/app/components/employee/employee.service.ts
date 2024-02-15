@@ -4,13 +4,13 @@ import { ThrowStmt } from "@angular/compiler";
 import { Injectable } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { EMPTY, Observable } from "rxjs";
-import { Product } from "./product.model";
+import { Employee } from "./employee.model";
 
 @Injectable({
   providedIn: "root", // singleton, uma classe que tem apenas uma instância
 })
-export class ProductService {
-  baseUrl = "http://localhost:3001/products";
+export class EmployeeService {
+  baseUrl = "http://localhost:3001/employees";
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
 
@@ -23,8 +23,8 @@ export class ProductService {
     });
   }
 
-  create(product: Product): Observable<Product> {
-    return this.http.post<Product>(this.baseUrl, product).pipe(
+  create(employee: Employee): Observable<Employee> {
+    return this.http.post<Employee>(this.baseUrl, employee).pipe(
       //pipe para retornar um observable// caso cair em algum erro no tach ele vai cair no error
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
@@ -37,35 +37,35 @@ export class ProductService {
     return EMPTY;
   }
 
-  read(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.baseUrl).pipe(
+  read(): Observable<Employee[]> {
+    return this.http.get<Employee[]>(this.baseUrl).pipe(
       //pipe para retornar um observable// caso cair em algum erro no tach ele vai cair no error
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     ); // ;
   }
 
-  readById(id: string): Observable<Product> {
+  readById(id: string): Observable<Employee> {
     const url = `${this.baseUrl}/${id}`;
-    return this.http.get<Product>(url).pipe(
+    return this.http.get<Employee>(url).pipe(
       //pipe para retornar um observable// caso cair em algum erro no tach ele vai cair no error
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     ); // ;
   }
 
-  update(product: Product): Observable<Product> {
-    const url = `${this.baseUrl}/${product.id}`;
-    return this.http.put<Product>(url, product).pipe(
+  update(employee: Employee): Observable<Employee> {
+    const url = `${this.baseUrl}/${employee.id}`;
+    return this.http.put<Employee>(url, employee).pipe(
       //pipe para retornar um observable// caso cair em algum erro no tach ele vai cair no error
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     ); // ;
   }
 
-  delete(id: number | undefined): Observable<Product> {
+  delete(id: number | undefined): Observable<Employee> {
     const url = `${this.baseUrl}/${id}`;
-    return this.http.delete<Product>(url).pipe(
+    return this.http.delete<Employee>(url).pipe(
       //pipe para retornar um observable// caso cair em algum erro no tach ele vai cair no error
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
