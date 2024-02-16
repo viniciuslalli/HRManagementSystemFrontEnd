@@ -9,6 +9,5 @@ export interface Employee {
     phonenumber: string
     nationality: string
     dateOfBirth: string
-    
 
 }

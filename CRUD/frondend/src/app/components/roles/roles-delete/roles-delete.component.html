@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-title>Delete Roles</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Role Name" [(ngModel)]="role.name" name="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Benefits" [(ngModel)]="role.benefits" name="benefits">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="delete()" color="warn">
+        Delete
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancel
+    </button>
+</mat-card>

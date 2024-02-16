@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-title>Updated Roles</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Role Name" [(ngModel)]="role.name" name="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Description" [(ngModel)]="role.benefits" name="benefits">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="updateRole()" color="primary">
+        Updated
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancel
+    </button>
+</mat-card>

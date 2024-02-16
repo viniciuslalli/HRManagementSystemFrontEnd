@@ -27,6 +27,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
@@ -38,6 +40,18 @@ import { EmployeeUpdateComponent } from './components/employee/employee-update/e
 import { EmployeeDeleteComponent } from './components/employee/employee-delete/employee-delete.component';
 import { LoginComponent } from './components/authentication/login/login.component';
 import { AuthService } from './components/authentication/auth.service';
+import { DepartmentCreateComponent } from './components/departments/department-create/department-create.component';
+import { DepartmentDeleteComponent } from './components/departments/department-delete/department-delete.component';
+import { DepartmentReadComponent } from './components/departments/department-read/department-read.component';
+import { DepartmentRead2Component } from './components/departments/department-read2/department-read2.component';
+import { DepartmentUpdateComponent } from './components/departments/department-update/department-update.component';
+import { DepartmentCrudComponent } from './views/department-crud/department-crud.component';
+import { RolesCreateComponent } from './components/roles/roles-create/roles-create.component';
+import { RolesDeleteComponent } from './components/roles/roles-delete/roles-delete.component';
+import { RolesUpdateComponent } from './components/roles/roles-update/roles-update.component';
+import { RolesReadComponent } from './components/roles/roles-read/roles-read.component';
+import { RolesRead2Component } from './components/roles/roles-read2/roles-read2.component';
+import { RoleCrudComponent } from './views/role-crud/role-crud.component';
 
 registerLocaleData(localePt);
 
@@ -59,7 +73,20 @@ registerLocaleData(localePt);
     EmployeeRead2Component,
     EmployeeUpdateComponent,
     EmployeeDeleteComponent,
-    LoginComponent
+    DepartmentCreateComponent,
+    LoginComponent,
+    DepartmentCreateComponent,
+    DepartmentDeleteComponent,
+    DepartmentReadComponent,
+    DepartmentRead2Component,
+    DepartmentUpdateComponent,
+    DepartmentCrudComponent,
+    RolesCreateComponent,
+    RolesDeleteComponent,
+    RolesUpdateComponent,
+    RolesReadComponent,
+    RolesRead2Component,
+    RoleCrudComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +104,9 @@ registerLocaleData(localePt);
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatDatepickerModule,
+    MatNativeDateModule 
   ],
   providers: [{
     provide: LOCALE_ID,

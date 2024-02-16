@@ -1,18 +1,6 @@
 {
   "employees": [
     {
-      "id": 1,
-      "name": "Vinicius",
-      "surname": "Lalli",
-      "salary": 45000,
-      "gender": "MALE",
-      "address": "Curitiba",
-      "email": "vinicius@gmail.com",
-      "phonenumber": "555",
-      "nationality": "Brazilian",
-      "dateOfBirth": "1994-06-11"
-    },
-    {
       "id": 2,
       "name": "Maria",
       "surname": "Silva",
@@ -59,6 +47,42 @@
       "phonenumber": "789",
       "nationality": "Spanish",
       "dateOfBirth": "1992-05-18"
+    },
+    {
+      "name": "Dogan",
+      "surname": "Kilaz",
+      "salary": "50000",
+      "gender": "MALE",
+      "address": "Street Turkey",
+      "email": "dogankilaz@gmail.com",
+      "phonenumber": "5555",
+      "nationality": "Turkish",
+      "dateOfBirth": "1994-01-01",
+      "id": 6
+    }
+  ],
+  "departments": [
+    {
+      "id": 1,
+      "departmentName": "Developers",
+      "description": "Department of the developers"
+    },
+    {
+      "departmentName": "Developers",
+      "description": "For Developers",
+      "id": 2
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "name": "Back-end",
+      "benefits": "Full-time"
+    },
+    {
+      "name": "Front-end Engineer",
+      "benefits": "that person who own front-end skills but also devops",
+      "id": 2
     }
   ]
 }
