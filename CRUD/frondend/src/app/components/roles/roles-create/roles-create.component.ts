@@ -12,6 +12,7 @@ export class RolesCreateComponent implements OnInit {
 
   role: Role = {
     name: '',
+    position:'',
     benefits:''
   }
 

@@ -11,6 +11,11 @@ import { Employee } from "./employee.model";
 })
 export class EmployeeService {
   baseUrl = "http://localhost:3001/employees";
+  baseUrlGetAll = "http://localhost:8080/api/employee/getAll";
+  baseUrlGetById = "http://localhost:8080/api/employee/get";
+  baseUrlUpdateById = "http://localhost:8080/api/employee/update";
+  baseUrlDeleteById = "http://localhost:8080/api/employee/deleteById";
+  baseUrlAddEmployee = "http://localhost:8080/api/employee/add";
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
 
@@ -24,7 +29,7 @@ export class EmployeeService {
   }
 
   create(employee: Employee): Observable<Employee> {
-    return this.http.post<Employee>(this.baseUrl, employee).pipe(
+    return this.http.post<Employee>(this.baseUrlAddEmployee, employee).pipe(
       //pipe para retornar um observable// caso cair em algum erro no tach ele vai cair no error
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
@@ -38,11 +43,29 @@ export class EmployeeService {
   }
 
   read(): Observable<Employee[]> {
-    return this.http.get<Employee[]>(this.baseUrl).pipe(
-      //pipe para retornar um observable// caso cair em algum erro no tach ele vai cair no error
-      map((obj) => obj),
+    return this.http.get<any>(this.baseUrlGetAll).pipe(
+      map(response => {
+        if (response.success && response.data){
+          // displayedColumns = ['id', 'name', 'surname', 'salary', 'gender', 'address', 'email', 'phonenumber', 'nationality', 'dateOfBirth', 'action']
+          return response.data.map((data: any) => ({
+            id: data.id,
+            name: data.name,
+            surname: data.surname,
+            salary: data.salary,
+            gender: data.gender,
+            address: data.address,
+            email: data.email,
+            phoneNumber: data.phoneNumber,
+            nationality: data.nationality,
+            dateOfBirth: data.dateOfBirth
+          }));
+        } else {
+          // return an empty list.
+          return [];
+        }
+      }),
       catchError((e) => this.errorHandler(e))
-    ); // ;
+    ); 
   }
 
   readById(id: string): Observable<Employee> {
@@ -64,7 +87,7 @@ export class EmployeeService {
   }
 
   delete(id: number | undefined): Observable<Employee> {
-    const url = `${this.baseUrl}/${id}`;
+    const url = `${this.baseUrlDeleteById}/${id}`;
     return this.http.delete<Employee>(url).pipe(
       //pipe para retornar um observable// caso cair em algum erro no tach ele vai cair no error
       map((obj) => obj),

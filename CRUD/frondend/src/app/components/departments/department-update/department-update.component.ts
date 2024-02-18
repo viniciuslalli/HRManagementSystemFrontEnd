@@ -20,10 +20,17 @@ export class DepartmentUpdateComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id') 
-    this.DepartmentService.readById(id!).subscribe(department => {
-      this.department = department;
-    })
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.DepartmentService.readById(id).subscribe(
+        department => {
+          this.department = department;
+        },
+        error => {
+          console.error('Erro ao carregar departamento:', error);
+        }
+      );
+    }
   }
 
   updateDepartment(): void{

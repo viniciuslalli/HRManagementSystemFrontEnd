@@ -9,26 +9,26 @@ import { Role } from '../roles.model';
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: Role[] = [
-  { "id": 1, "name": "Back-end", "benefits": "Part-time" },
-  { "id": 2, "name": "Front-end", "benefits": "Full-time" },
-  { "id": 3, "name": "Database Administrator", "benefits": "Full-time" },
-  { "id": 4, "name": "Software Engineer", "benefits": "Full-time" },
-  { "id": 5, "name": "DevOps Engineer", "benefits": "Full-time" },
-  { "id": 6, "name": "UI/UX Designer", "benefits": "Part-time" },
-  { "id": 7, "name": "Quality Assurance Tester", "benefits": "Full-time" },
-  { "id": 8, "name": "Network Administrator", "benefits": "Full-time" },
-  { "id": 9, "name": "Data Scientist", "benefits": "Full-time" },
-  { "id": 10, "name": "System Analyst", "benefits": "Part-time" },
-  { "id": 11, "name": "Technical Support Specialist", "benefits": "Full-time" },
-  { "id": 12, "name": "Project Manager", "benefits": "Full-time" },
-  { "id": 13, "name": "Business Analyst", "benefits": "Part-time" },
-  { "id": 14, "name": "Cyber Security Analyst", "benefits": "Full-time" },
-  { "id": 15, "name": "Mobile App Developer", "benefits": "Full-time" },
-  { "id": 16, "name": "Cloud Architect", "benefits": "Part-time" },
-  { "id": 17, "name": "Game Developer", "benefits": "Full-time" },
-  { "id": 18, "name": "Embedded Systems Engineer", "benefits": "Full-time" },
-  { "id": 19, "name": "AI/ML Engineer", "benefits": "Full-time" },
-  { "id": 20, "name": "Technical Writer", "benefits": "Part-time" }
+  { "id": 1, "name": "Back-end", "position": "Back-end", "benefits": "Part-time" },
+  { "id": 2, "name": "Front-end", "position": "Front-end", "benefits": "Full-time" },
+  { "id": 3, "name": "UI/UX Designer", "position": "UI/UX Designer", "benefits": "Flexible hours" },
+  { "id": 4, "name": "Data Scientist", "position": "Data Scientist", "benefits": "Remote work" },
+  { "id": 5, "name": "Software Engineer", "position": "Software Engineer", "benefits": "Health insurance" },
+  { "id": 6, "name": "Product Manager", "position": "Product Manager", "benefits": "Paid time off" },
+  { "id": 7, "name": "Quality Assurance Engineer", "position": "Quality Assurance Engineer", "benefits": "401(k) matching" },
+  { "id": 8, "name": "DevOps Engineer", "position": "DevOps Engineer", "benefits": "Stock options" },
+  { "id": 9, "name": "Systems Analyst", "position": "Systems Analyst", "benefits": "Gym membership" },
+  { "id": 10, "name": "Network Administrator", "position": "Network Administrator", "benefits": "Flexible spending account" },
+  { "id": 11, "name": "Cybersecurity Specialist", "position": "Cybersecurity Specialist", "benefits": "Childcare assistance" },
+  { "id": 12, "name": "Database Administrator", "position": "Database Administrator", "benefits": "Tuition reimbursement" },
+  { "id": 13, "name": "Technical Support Specialist", "position": "Technical Support Specialist", "benefits": "Paid parental leave" },
+  { "id": 14, "name": "Business Analyst", "position": "Business Analyst", "benefits": "Employee assistance program" },
+  { "id": 15, "name": "Project Manager", "position": "Project Manager", "benefits": "Company car" },
+  { "id": 16, "name": "UI Developer", "position": "UI Developer", "benefits": "Profit sharing" },
+  { "id": 17, "name": "IT Manager", "position": "IT Manager", "benefits": "Flexible schedule" },
+  { "id": 18, "name": "Software Architect", "position": "Software Architect", "benefits": "Free snacks" },
+  { "id": 19, "name": "Machine Learning Engineer", "position": "Machine Learning Engineer", "benefits": "Casual dress code" },
+  { "id": 20, "name": "Full-stack Developer", "position": "Full-stack Developer", "benefits": "Performance bonuses" }
   ];
 
 /**

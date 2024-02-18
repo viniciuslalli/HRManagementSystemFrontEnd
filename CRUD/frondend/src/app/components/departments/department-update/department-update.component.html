@@ -1,18 +1,17 @@
-<mat-card>
+<mat-card *ngIf="department">
     <mat-card-title>Updated Department</mat-card-title>
     <form>
-        <mat-form-field>
-            <input matInput placeholder="Department Name" [(ngModel)]="department.departmentName" name="departmentName">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Description" [(ngModel)]="department.description" name="description">
-        </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Department Name" [(ngModel)]="department.departmentName" name="departmentName">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Description" [(ngModel)]="department.description" name="description">
+      </mat-form-field>
     </form>
     <button mat-raised-button (click)="updateDepartment()" color="primary">
-        Updated
+      Updated
     </button>
-    
     <button mat-raised-button (click)="cancel()">
-        Cancel
+      Cancel
     </button>
 </mat-card>

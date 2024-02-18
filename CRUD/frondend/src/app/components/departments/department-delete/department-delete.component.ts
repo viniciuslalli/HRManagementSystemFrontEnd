@@ -20,9 +20,16 @@ export class DepartmentDeleteComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.DepartmentService.readById(id!).subscribe((department) => {
-      this.department = department;
-    });
+    if (id) {
+      this.DepartmentService.readById(id).subscribe(
+        department => {
+          this.department = department;
+        },
+        error => {
+          console.error('Erro ao carregar departamento:', error);
+        }
+      );
+    }
   }
 
   delete(): void {

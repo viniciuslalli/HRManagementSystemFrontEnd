@@ -19,7 +19,7 @@ import { ForDirective } from './directives/for.directive';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -52,6 +52,7 @@ import { RolesUpdateComponent } from './components/roles/roles-update/roles-upda
 import { RolesReadComponent } from './components/roles/roles-read/roles-read.component';
 import { RolesRead2Component } from './components/roles/roles-read2/roles-read2.component';
 import { RoleCrudComponent } from './views/role-crud/role-crud.component';
+import { AuthInterceptor } from './core/auth-interceptor.service';
 
 registerLocaleData(localePt);
 
@@ -106,12 +107,13 @@ registerLocaleData(localePt);
     MatPaginatorModule,
     MatSortModule,
     MatDatepickerModule,
-    MatNativeDateModule 
+    MatNativeDateModule
   ],
   providers: [{
     provide: LOCALE_ID,
     useValue: 'pt-BR'
   },
+  { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
   AuthService],
   bootstrap: [AppComponent]
 })

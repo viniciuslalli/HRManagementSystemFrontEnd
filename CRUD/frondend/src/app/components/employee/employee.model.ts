@@ -6,8 +6,10 @@ export interface Employee {
     gender: string
     address: string // put Addres Object 
     email: string
-    phonenumber: string
+    phoneNumber: string
     nationality: string
     dateOfBirth: string
+    roleId?: number
+    departmentId?: number
 
 }

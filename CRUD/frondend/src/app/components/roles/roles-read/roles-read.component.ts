@@ -10,7 +10,7 @@ import { RoleService } from '../roles.service';
 export class RolesReadComponent implements OnInit {
 
   roles!: Role[]
-  displayedColumns = ['id', 'name', 'benefits', 'action']
+  displayedColumns = ['id', 'name', 'position', 'benefits', 'action']
 
 
   constructor(private RoleService: RoleService) { }

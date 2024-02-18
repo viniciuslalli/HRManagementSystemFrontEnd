@@ -1,8 +1,11 @@
-<mat-card>
+<mat-card *ngIf="role">
     <mat-card-title>Updated Roles</mat-card-title>
     <form>
         <mat-form-field>
             <input matInput placeholder="Role Name" [(ngModel)]="role.name" name="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Role Position" [(ngModel)]="role.position" name="position">
         </mat-form-field>
         <mat-form-field>
             <input matInput placeholder="Description" [(ngModel)]="role.benefits" name="benefits">

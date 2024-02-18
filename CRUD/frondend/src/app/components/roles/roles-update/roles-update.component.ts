@@ -19,10 +19,17 @@ export class RolesUpdateComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id') 
-    this.RoleService.readById(id!).subscribe(role => {
-      this.role = role;
-    })
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.RoleService.readById(id).subscribe(
+        role => {
+          this.role = role;
+        },
+        error => {
+          console.error('Erro ao carregar role:', error);
+        }
+      );
+    }
   }
 
   updateRole(): void{

@@ -20,7 +20,7 @@
             <input matInput placeholder="Email" [(ngModel)]="employee.email" name="email"> 
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Phone Number" [(ngModel)]="employee.phonenumber" name="phonenumber"> 
+            <input matInput placeholder="Phone Number" [(ngModel)]="employee.phoneNumber" name="phoneNumber"> 
         </mat-form-field>
         <mat-form-field>
             <input matInput placeholder="Nationality" [(ngModel)]="employee.nationality" name="nationality"> 
@@ -28,6 +28,24 @@
         <mat-form-field>
             <input matInput placeholder="Date of Birth" [(ngModel)]="employee.dateOfBirth" name="dateOfBirth"> 
         </mat-form-field>
+        <mat-form-field>
+            <!-- <input matInput placeholder="Role" [(ngModel)]="employee.roleId" name="roleId"> -->
+            <mat-label>Select Role</mat-label>
+            <select matNativeControl [(ngModel)]="employee.roleId" name="roleId">
+                <option *ngFor="let role of roles" [value]="role.id">{{ role.name }}</option>
+            </select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <!-- <input matInput placeholder="Role" [(ngModel)]="employee.roleId" name="roleId"> -->
+            <mat-label>Select Department</mat-label>
+            <select matNativeControl [(ngModel)]="employee.departmentId" name="departmentId">
+                <option *ngFor="let department of departments" [value]="department.id">{{ department.departmentName }}</option>
+            </select>
+        </mat-form-field>
+        <!-- <mat-form-field>
+            <input matInput placeholder="Department" [(ngModel)]="employee.departmentId" name="departmentId"> 
+        </mat-form-field> -->
     </form>
     <button mat-raised-button (click)="createEmployee()" color="primary">
         Save
