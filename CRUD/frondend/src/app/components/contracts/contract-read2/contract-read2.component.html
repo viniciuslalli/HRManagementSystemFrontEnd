@@ -1,0 +1,62 @@
+<div class="mat-elevation-z8">
+    <table mat-table class="full-width-table" matSort aria-label="Elements">
+      <!-- Id Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>Id</th>
+        <td mat-cell *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="employeeId">
+        <th mat-header-cell *matHeaderCellDef>Type of Contrac</th>
+        <td mat-cell *matCellDef="let row">{{row.employeeId}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="typeContract">
+        <th mat-header-cell *matHeaderCellDef>Type of Contrac</th>
+        <td mat-cell *matCellDef="let row">{{row.typeContract}}</td>
+    </ng-container>
+
+    
+     <ng-container matColumnDef="salaryAmountMonth">
+        <th mat-header-cell *matHeaderCellDef>Salary Amount Month</th>
+        <td mat-cell *matCellDef="let row">{{row.salaryAmountMonth}}</td>
+    </ng-container>
+
+  
+    <ng-container matColumnDef="salaryAmountYear">
+        <th mat-header-cell *matHeaderCellDef>Salary Amount Year</th>
+        <td mat-cell *matCellDef="let row">{{row.salaryAmountYear}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="salaryDate">
+        <th mat-header-cell *matHeaderCellDef>Salary Date</th>
+        <td mat-cell *matCellDef="let row">{{row.salaryDate}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="hoursAmountMonth">
+        <th mat-header-cell *matHeaderCellDef>Hours Amount Month</th>
+        <td mat-cell *matCellDef="let row">{{row.hoursAmountMonth}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="startDateContract">
+        <th mat-header-cell *matHeaderCellDef>Start date Contract</th>
+        <td mat-cell *matCellDef="let row">{{row.startDateContract}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="endDateContract">
+        <th mat-header-cell *matHeaderCellDef>End date Contract</th>
+        <td mat-cell *matCellDef="let row">{{row.endDateContract}}</td>
+    </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator #paginator
+        [length]="dataSource?.data?.length"
+        [pageIndex]="0"
+        [pageSize]="10"
+        [pageSizeOptions]="[5, 10, 20]"
+        aria-label="Select page">
+    </mat-paginator>
+  </div>

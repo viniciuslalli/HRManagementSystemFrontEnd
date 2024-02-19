@@ -24,6 +24,8 @@ export class EmployeeUpdateComponent implements OnInit {
     this.EmployeeService.readById(id!).subscribe(employee => {
       this.employee = employee;
     })
+
+ 
   }
 
   updateEmployee(): void{

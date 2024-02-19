@@ -21,3 +21,11 @@
 .header .title-group i{
     padding-right: 5px;
 }
+
+
+.logout-button {
+    margin-left: auto; /* Empurra o botão para o canto direito */
+    color: #fff; /* Cor do texto do botão */
+    background-color: #f44336; /* Cor de fundo do botão */
+    margin-right: 16px; /* Espaçamento à direita do botão (opcional) */
+}

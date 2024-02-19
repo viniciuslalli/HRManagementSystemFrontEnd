@@ -1,0 +1,40 @@
+<mat-card>
+    <mat-card-title>New Contract</mat-card-title>
+    <form>
+        <mat-form-field>
+            <!-- <input matInput placeholder="Role" [(ngModel)]="employee.roleId" name="roleId"> -->
+            <mat-label>Select Employee</mat-label>
+            <select matNativeControl [(ngModel)]="contract.employeeId" name="employeeId">
+                <option *ngFor="let employee of employees" [value]="employee.id">{{ employee.name }} {{ employee.surname }}</option>
+            </select>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Type of Contract" [(ngModel)]="contract.typeContract" name="typeContract">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Salary Amount Month" [(ngModel)]="contract.salary.salaryAmountMonth" name="salaryAmountMonth">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Salary Amount Year" [(ngModel)]="contract.salary.salaryAmountYear" name="salaryAmountYear">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Salary Date" [(ngModel)]="contract.salary.salaryDate" name="salaryDate">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Hours Amloount Month" [(ngModel)]="contract.hoursAmountMonth" name="hoursAmountMonth">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Start date Contract" [(ngModel)]="contract.startDateContract" name="startDateContract">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="End date Contract" [(ngModel)]="contract.endDateContract" name="endDateContract">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="createRole()" color="primary">
+        Save
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancel
+    </button>
+</mat-card>

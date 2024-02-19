@@ -1,3 +1,5 @@
+import { Route, Router } from '@angular/router';
+import { AuthService } from '../../authentication/auth.service';
 import { HeaderService } from './header.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private HeaderService: HeaderService) { }
+  constructor(private HeaderService: HeaderService, private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -25,4 +27,9 @@ export class HeaderComponent implements OnInit {
     return this.HeaderService.headerData.routeUrl
   }
   
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/login']); // Redireciona para a página de login após fazer logout
+  }
 }

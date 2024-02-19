@@ -8,9 +8,6 @@
             <input matInput placeholder="Surname" [(ngModel)]="employee.surname" name="surname">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Salary ($)" [(ngModel)]="employee.salary" name="salary"> 
-        </mat-form-field>
-        <mat-form-field>
             <input matInput placeholder="Gender" [(ngModel)]="employee.gender" name="gender"> 
         </mat-form-field>
         <mat-form-field>
@@ -20,13 +17,19 @@
             <input matInput placeholder="Email" [(ngModel)]="employee.email" name="email"> 
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Phone Number" [(ngModel)]="employee.phoneNumber" name="phoneNumber"> 
+            <input matInput placeholder="Phone Number" [(ngModel)]="employee.phoneNumber" name="phonenumber"> 
         </mat-form-field>
         <mat-form-field>
             <input matInput placeholder="Nationality" [(ngModel)]="employee.nationality" name="nationality"> 
         </mat-form-field>
         <mat-form-field>
             <input matInput placeholder="Date of Birth" [(ngModel)]="employee.dateOfBirth" name="dateOfBirth"> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Role Id" [(ngModel)]="employee.roleId" name="roleId"> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Department Id" [(ngModel)]="employee.departmentId" name="departmentId"> 
         </mat-form-field>
     </form>
     <button mat-raised-button (click)="updateEmployee()" color="primary">

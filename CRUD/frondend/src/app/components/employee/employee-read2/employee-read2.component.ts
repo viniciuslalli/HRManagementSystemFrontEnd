@@ -17,7 +17,7 @@ export class EmployeeRead2Component implements AfterViewInit {
   dataSource: EmployeeRead2DataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name', 'surname', 'salary', 'gender', 'address', 'email', 'phoneNumber', 'nationality', 'dateOfBirth', 'action']
+  displayedColumns = ['id', 'name', 'surname', 'gender', 'address', 'email', 'phoneNumber', 'nationality', 'dateOfBirth', 'action']
 
   constructor() {
     this.dataSource = new EmployeeRead2DataSource();

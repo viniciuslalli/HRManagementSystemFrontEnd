@@ -53,6 +53,12 @@ import { RolesReadComponent } from './components/roles/roles-read/roles-read.com
 import { RolesRead2Component } from './components/roles/roles-read2/roles-read2.component';
 import { RoleCrudComponent } from './views/role-crud/role-crud.component';
 import { AuthInterceptor } from './core/auth-interceptor.service';
+import { ContractCreateComponent } from './components/contracts/contract-create/contract-create.component';
+import { ContractDeleteComponent } from './components/contracts/contract-delete/contract-delete.component';
+import { ContractReadComponent } from './components/contracts/contract-read/contract-read.component';
+import { ContractRead2Component } from './components/contracts/contract-read2/contract-read2.component';
+import { ContractUpdateComponent } from './components/contracts/contract-update/contract-update.component';
+import { ContractCrudComponent } from './views/contract-crud/contract-crud.component';
 
 registerLocaleData(localePt);
 
@@ -87,7 +93,13 @@ registerLocaleData(localePt);
     RolesUpdateComponent,
     RolesReadComponent,
     RolesRead2Component,
-    RoleCrudComponent
+    RoleCrudComponent,
+    ContractCreateComponent,
+    ContractDeleteComponent,
+    ContractReadComponent,
+    ContractRead2Component,
+    ContractUpdateComponent,
+    ContractCrudComponent
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@ import { Employee } from "./employee.model";
 export class EmployeeService {
   baseUrl = "http://localhost:3001/employees";
   baseUrlGetAll = "http://localhost:8080/api/employee/getAll";
-  baseUrlGetById = "http://localhost:8080/api/employee/get";
+  baseUrlGetById = "http://localhost:8080/api/employee/getEmployee";
   baseUrlUpdateById = "http://localhost:8080/api/employee/update";
   baseUrlDeleteById = "http://localhost:8080/api/employee/deleteById";
   baseUrlAddEmployee = "http://localhost:8080/api/employee/add";
@@ -57,7 +57,9 @@ export class EmployeeService {
             email: data.email,
             phoneNumber: data.phoneNumber,
             nationality: data.nationality,
-            dateOfBirth: data.dateOfBirth
+            dateOfBirth: data.dateOfBirth,
+            roleId: data.roleId,
+            departmentId: data.departmentId
           }));
         } else {
           // return an empty list.
@@ -68,17 +70,41 @@ export class EmployeeService {
     ); 
   }
 
-  readById(id: string): Observable<Employee> {
-    const url = `${this.baseUrl}/${id}`;
-    return this.http.get<Employee>(url).pipe(
-      //pipe para retornar um observable// caso cair em algum erro no tach ele vai cair no error
-      map((obj) => obj),
-      catchError((e) => this.errorHandler(e))
-    ); // ;
+  readById(id: string): Observable<any> {
+    const url = `${this.baseUrlGetById}/${id}`;
+    return this.http.get<any>(url).pipe(
+      map(response => {
+        if (response.success && response.data){
+          return {
+            id: id,
+            name: response.data.name,
+            surname: response.data.surname,
+            gender: response.data.gender,
+            address: response.data.address,
+            email: response.data.email,
+            phoneNumber: response.data.phoneNumber,
+            nationality: response.data.nationality,
+            dateOfBirth: response.data.dateOfBirth,
+            departmentId: response.data.departmentId,
+            roleId: response.data.roleId
+
+          };
+        } else {
+          // Retorna null se não encontrar nenhum departamento
+          return null;
+        }
+      }),
+      catchError((e) => {
+        this.errorHandler(e);
+        // Retorna null em caso de erro
+        return EMPTY;
+      })
+    );
   }
 
+
   update(employee: Employee): Observable<Employee> {
-    const url = `${this.baseUrl}/${employee.id}`;
+    const url = `${this.baseUrlUpdateById}/${employee.id}`;
     return this.http.put<Employee>(url, employee).pipe(
       //pipe para retornar um observable// caso cair em algum erro no tach ele vai cair no error
       map((obj) => obj),

@@ -2,10 +2,10 @@
     <mat-card-title>Delete Departments</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Department Name" [(ngModel)]="department.departmentName" name="departmentName">
+            <input matInput placeholder="Department Name" [(ngModel)]="department.departmentName" name="departmentName" disabled>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Description" [(ngModel)]="department.description" name="description">
+            <input matInput placeholder="Description" [(ngModel)]="department.description" name="description" disabled>
         </mat-form-field>
     </form>
     <button mat-raised-button (click)="delete()" color="warn">

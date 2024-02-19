@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './components/authentication/auth.service';
 
@@ -6,11 +6,17 @@ import { AuthService } from './components/authentication/auth.service';
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   constructor(public authService: AuthService, private router: Router) {}
 
-  onLoggedIn() {
+  ngOnInit(): void {
+    // Verifica se o usuário está logado
+    if (this.authService.isLoggedIn) {
+      this.router.navigate(['/']); // Redireciona para a página inicial se estiver autenticado
+    }
+  }
 
+  onLoggedIn() {
     // Lógica para redirecionar ou atualizar a página após o login bem-sucedido
     // Por exemplo:
     // this.router.navigate(['/dashboard']); // Se estiver usando o roteador

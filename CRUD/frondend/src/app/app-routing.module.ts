@@ -16,12 +16,23 @@ import { RoleCrudComponent } from './views/role-crud/role-crud.component';
 import { RolesCreateComponent } from './components/roles/roles-create/roles-create.component';
 import { RolesDeleteComponent } from './components/roles/roles-delete/roles-delete.component';
 import { RolesUpdateComponent } from './components/roles/roles-update/roles-update.component';
+import { ContractCrudComponent } from './views/contract-crud/contract-crud.component';
+import { ContractCreateComponent } from './components/contracts/contract-create/contract-create.component';
+import { ContractDeleteComponent } from './components/contracts/contract-delete/contract-delete.component';
+import { ContractUpdateComponent } from './components/contracts/contract-update/contract-update.component';
+import { AuthGuard } from './core/auth-guard.service';
+import { LoginComponent } from './components/authentication/login/login.component';
 
 
 const routes: Routes = [
   {
     path: "",
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [AuthGuard] // Protege a rota da página inicial
+  },
+  {
+    path: "login",
+    component: LoginComponent // Configura a rota para o componente de login
   },
   {
     path: "employees",
@@ -70,6 +81,22 @@ const routes: Routes = [
   {
     path: "roles/update/:id",
     component: RolesUpdateComponent
+  },
+  {
+    path: "contracts",
+    component: ContractCrudComponent
+  },
+  {
+    path: "contracts/create",
+    component: ContractCreateComponent
+  },
+  {
+    path: "contracts/delete/:id",
+    component: ContractDeleteComponent
+  },
+  {
+    path: "contracts/update/:id",
+    component: ContractUpdateComponent
   },
 
 
