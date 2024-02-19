@@ -2,11 +2,11 @@
   "employees": [
     {
       "id": 2,
-      "name": "Maria",
-      "surname": "Silva",
+      "name": "Pravin",
+      "surname": "Jadhav",
       "salary": 52000,
-      "gender": "FEMALE",
-      "address": "São Paulo",
+      "gender": "MALE",
+      "address": "street from sidney",
       "email": "mariaSilva@gmail.com",
       "phonenumber": "123",
       "nationality": "Brazilian",
@@ -35,18 +35,6 @@
       "phonenumber": "456",
       "nationality": "British",
       "dateOfBirth": "1988-07-30"
-    },
-    {
-      "id": 5,
-      "name": "Carlos",
-      "surname": "Garcia",
-      "salary": 51000,
-      "gender": "MALE",
-      "address": "Madrid",
-      "email": "carlos.garcia@example.com",
-      "phonenumber": "789",
-      "nationality": "Spanish",
-      "dateOfBirth": "1992-05-18"
     },
     {
       "name": "Dogan",
@@ -83,6 +71,21 @@
       "name": "Front-end Engineer",
       "benefits": "that person who own front-end skills but also devops",
       "id": 2
+    }
+  ],
+  "contracts": [
+    {   
+      "id": 11,
+      "employeeId": 1,  
+      "salary": {
+        "salaryAmountMonth": 6000,
+        "salaryAmountYear": 72000,
+        "salaryDate": "2024-02-02T21:45:29.380Z"
+      },
+      "typeContract": "teste11",
+      "hoursAmountMonth": 30,
+      "startDateContract": "2024-12-02T21:45:29.380Z",
+      "endDateContract": "2025-12-02T21:45:29.380Z"
     }
   ]
 }
