@@ -1,0 +1,23 @@
+# Stage of compilation
+FROM node:14 as build
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+RUN npm install
+
+COPY . .
+RUN npm run build --prod
+
+# Stage of execution
+FROM nginx:alpine
+
+# Config servidor port
+EXPOSE 4200
+
+# Copy the files of our application compiled to the directory of documents from Nginx
+COPY --from=build /app/dist/frontend /usr/share/nginx/html
+
+
+# Standard configuration to the Nginx servidor.
+CMD ["nginx", "-g", "daemon off;"]
