@@ -1,9 +1,72 @@
-# HRManagementSystemFrontEnd
+# Angular HR Management System Frontend
 
-First things first: 
+This Angular application serves as the frontend for the [HRManagementSystem API](https://github.com/your-username/HRManagementSystem)](https://github.com/dgnklz/HRManagementSystem.git), which is a Java-based backend system developed using the Spring framework for managing human resources.
 
-- npm install into frontend and backend folder
-- npm start first in backend folder to start the "server" 
-- npm start in frontend folder to start the application
+## Prerequisites
 
-That's it! 
+Before running this Angular application, ensure that you have the following tools and dependencies installed:
+
+- Node.js and npm
+- Angular CLI
+- Access to the HRManagementSystem API backend (refer to its [repository](https://github.com/your-username/HRManagementSystem)](https://github.com/viniciuslalli/HRManagementSystemFrontEnd.git) for setup instructions)
+
+## Setup Instructions
+
+Follow these steps to set up and run the Angular HR Management System Frontend:
+
+1. Clone this repository:
+
+    ```bash
+    git clone https://github.com/your-username/angular-hr-frontend.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd angular-hr-frontend
+    ```
+
+3. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+4. Configure the backend URL:
+
+    Open the file `src/environments/environment.ts` and set the `apiUrl` property to the base URL of the HRManagementSystem API backend. For example:
+
+    ```typescript
+    export const environment = {
+      production: false,
+      apiUrl: 'http://localhost:8080/api' // Set this URL to your backend API endpoint
+    };
+    ```
+
+5. Start the Angular development server:
+
+    ```bash
+    ng serve
+    ```
+
+6. Access the application:
+
+    Once the server has started, you can access the application by navigating to [http://localhost:4200](http://localhost:4200) in your web browser.
+
+## Contributing
+
+If you wish to contribute to this project, please follow these steps:
+
+1. Fork this repository.
+2. Create your own branch: `git checkout -b feature/new-feature`.
+3. Make your changes and commit them: `git commit -am 'Adding a new feature'`.
+4. Push to the branch: `git push origin feature/new-feature`.
+5. Submit a pull request.
+
+## Support
+
+If you encounter any issues with setting up or using this application, feel free to open an issue in this repository. We're here to help!
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
