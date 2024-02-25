@@ -1,6 +1,6 @@
 # Angular HR Management System Frontend
 
-This Angular application serves as the frontend for the [[HRManagementSystem API] [(https://github.com/dgnklz/HRManagementSystem.git)](https://github.com/dgnklz/HRManagementSystem)](https://github.com/dgnklz/HRManagementSystem), which is a Java-based backend system developed using the Spring framework for managing human resources.
+This Angular application serves as the frontend for the [HRManagementSystem API] (https://github.com/dgnklz/HRManagementSystem), which is a Java-based backend system developed using the Spring framework for managing human resources.
 
 ## Prerequisites
 
@@ -8,7 +8,7 @@ Before running this Angular application, ensure that you have the following tool
 
 - Node.js and npm
 - Angular CLI
-- Access to the HRManagementSystem API backend (https://github.com/viniciuslalli/HRManagementSystemFrontEnd.git) for setup instructions)
+- Access to the HRManagementSystem API backend (https://github.com/dgnklz/HRManagementSystem) for setup instructions)
 
 ## Setup Instructions
 
