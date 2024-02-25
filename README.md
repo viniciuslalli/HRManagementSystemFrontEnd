@@ -8,7 +8,7 @@ Before running this Angular application, ensure that you have the following tool
 
 - Node.js and npm
 - Angular CLI
-- Access to the HRManagementSystem API backend (refer to its [repository](https://github.com/your-username/HRManagementSystem)](https://github.com/viniciuslalli/HRManagementSystemFrontEnd.git) for setup instructions)
+- Access to the HRManagementSystem API backend (https://github.com/viniciuslalli/HRManagementSystemFrontEnd.git) for setup instructions)
 
 ## Setup Instructions
 
