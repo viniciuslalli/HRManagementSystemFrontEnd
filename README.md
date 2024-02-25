@@ -46,7 +46,7 @@ Follow these steps to set up and run the Angular HR Management System Frontend:
 5. Start the Angular development server:
 
     ```bash
-    ng serve
+    ng start
     ```
 
 6. Access the application:
