@@ -17,13 +17,13 @@ Follow these steps to set up and run the Angular HR Management System Frontend:
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/your-username/angular-hr-frontend.git
+    git clone https://github.com/viniciuslalli/HRManagementSystemFrontEnd.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd angular-hr-frontend
+    cd /CRUD/frondend/
     ```
 
 3. Install dependencies:
