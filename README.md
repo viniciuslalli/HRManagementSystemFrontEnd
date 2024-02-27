@@ -10,6 +10,11 @@ Before running this Angular application, ensure that you have the following tool
 - Angular CLI
 - Access to the HRManagementSystem API backend (https://github.com/dgnklz/HRManagementSystem) for setup instructions)
 
+## Development Team Group 2
+
+- [Dogan Kilaz]
+- [Vinicius Lalli]
+
 ## Setup Instructions
 
 Follow these steps to set up and run the Angular HR Management System Frontend:
